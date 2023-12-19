@@ -4,6 +4,10 @@
 
 .bm-burger-button {
     @apply 
+        3xl:hidden
+        2xl:hidden
+        xl:hidden
+        lg:hidden
         xxs:p-5
         w-[11px]
         h-[7px]
