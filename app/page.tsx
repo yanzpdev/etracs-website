@@ -8,6 +8,7 @@ import Partners from './components/modules/Partners'
 import Products from './components/modules/Products'
 import Solutions from './components/modules/Solutions'
 import Messenger from './components/ui/Messenger'
+import VideoOverlay from './components/ui/VideoOverlay'
 
 export const metadata: Metadata = {
   title: 'ETRACS',
@@ -25,14 +26,16 @@ export default function Home() {
 
   return (
     <main className={`text-slate-700 ${raleway.className}`}>
-      <Navbar isPage={false} />
-      <Sidebar />
-      <Homepage />
-      <Members />
-      <Partners />
-      <Products />
-      <Solutions />
-      <Messenger />
+      {/* <VideoOverlay> */}
+        <Navbar isPage={false} />
+        <Sidebar />
+        <Homepage />
+        <Members />
+        <Partners />
+        <Products />
+        <Solutions />
+        <Messenger />
+      {/* </VideoOverlay> */}
     </main>
   )
 }

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^10.16.16",
     "mongoose": "^8.0.3",
     "next": "14.0.3",
     "next-auth": "^4.24.5",
@@ -18,7 +19,7 @@
     "react-facebook": "^9.0.12",
     "react-hook-form": "^7.49.2",
     "react-icons": "^4.12.0",
-    "react-player": "^2.13.0",
+    "react-player": "^2.14.0",
     "react-scroll": "^1.9.0",
     "swiper": "^11.0.5"
   },

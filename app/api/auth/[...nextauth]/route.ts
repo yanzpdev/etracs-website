@@ -7,14 +7,17 @@ import User from "@/models/user";
 const authOptions = {
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID || 'defaultClientId',
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET || 'defaultClientSecret'
+      clientId: process.env.GOOGLE_CLIENT_ID ?? '',
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? ''
     }),
     FacebookProvider({
-        clientId: process.env.FACEBOOK_CLIENT_ID || 'defaultClientId',
-        clientSecret: process.env.FACEBOOK_CLIENT_SECRET || 'defaultClientSecret'
+        clientId: process.env.FACEBOOK_CLIENT_ID ?? '',
+        clientSecret: process.env.FACEBOOK_CLIENT_SECRET ?? ''
     }),
   ],
+
+  secret: process.env.SECRET,
+  
   callbacks: {
     async signIn({ user, account }: any): Promise<string | boolean> {  
       if(account.provider === 'google' || account.provider === 'facebook') {
