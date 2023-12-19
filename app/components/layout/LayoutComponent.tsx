@@ -52,7 +52,7 @@ const LayoutComponent: React.FC<ClassNames> = ({
           <ContentWrapper className={contentWrapperClass}>
             <ContentWrapper className=''>
               <Title text={titleText} style={titleStyle} />
-              <HorizontalLine height='3.5px'/>
+              <HorizontalLine lineStyle='bg-[#334155]' height='4.5px'/>
               <Text text={descText} style={descStyle} />
               <Image
                 priority
@@ -87,7 +87,7 @@ const LayoutComponent: React.FC<ClassNames> = ({
         <>
           <ContentWrapper className={contentWrapperClass}>
             <Title text={titleText} style={titleStyle} />
-            <HorizontalLine height='3.5px'/>
+            <HorizontalLine lineStyle='bg-[#334155]' height='4.5px'/>
             <Text text={descText} style={descStyle} />
             <Slider members={data} />
             <LinkBtn text={btnText} btnStyle={btnStyle} url={`/${name}`} />
@@ -101,7 +101,7 @@ const LayoutComponent: React.FC<ClassNames> = ({
         <>
           <ContentWrapper className={contentWrapperClass}>
             <Title text={titleText} style={titleStyle} />
-            <HorizontalLine height='3.5px'/>
+            <HorizontalLine lineStyle='bg-[#334155]' height='4.5px'/>
             <Text text={descText} style={descStyle} />
             <ContentWrapper className='
               grid grid-cols-4 
@@ -137,7 +137,7 @@ const LayoutComponent: React.FC<ClassNames> = ({
         <>
           <ContentWrapper className={contentWrapperClass}>
             <Title text={titleText} style={titleStyle} />
-            <HorizontalLine height='3.5px'/>
+            <HorizontalLine lineStyle='bg-[#334155]' height='4.5px'/>
             <Text text={descText} style={descStyle} />
             <ProductsItems />
           </ContentWrapper>
@@ -181,7 +181,7 @@ const LayoutComponent: React.FC<ClassNames> = ({
             
             <ContentWrapper className='flex flex-col'>
               <Title text={titleText} style={titleStyle} />
-              <HorizontalLine height='3.5px'/>
+              <HorizontalLine lineStyle='bg-[#334155]' height='4.5px'/>
               <Text text={descText} style={descStyle} />
               <ContentWrapper className='
                 border 

@@ -9,6 +9,7 @@ import Products from './components/modules/Products'
 import Solutions from './components/modules/Solutions'
 import Messenger from './components/ui/Messenger'
 import VideoOverlay from './components/ui/VideoOverlay'
+import Footer from './components/ui/Footer'
 
 export const metadata: Metadata = {
   title: 'ETRACS',
@@ -34,6 +35,7 @@ export default function Home() {
         <Partners />
         <Products />
         <Solutions />
+        <Footer />
         <Messenger />
       {/* </VideoOverlay> */}
     </main>

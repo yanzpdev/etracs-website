@@ -85,17 +85,17 @@ const members = async () => {
     <div className={`text-slate-700 ${raleway.className}`}>
       <Navbar isPage={true} />
       <Container name='none' addClasses=''>
-        <div className='my-10'>
+        <ContentWrapper className='my-10'>
           <h1 className='text-6xl font-bold'>Members</h1>
           {groupedData ? (
-            <div className="px-5 xs:px-0 xxs:px-0">
+            <ContentWrapper className="px-5 xs:px-0 xxs:px-0">
               <ul>
                 {Object.keys(groupedData).map((clusterid) => (
                   <li key={clusterid} className="break-after-auto my-3 w-full">
                     <Text text={clusteridMapping[clusterid] || clusterid} style='2xl:text-4xl text-3xl xs:text-lg xxs:text-base font-bold m-5' />
                     <ul className='grid grid-cols-8 lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 xxs:grid-cols-2 font-semibold '>
                       {groupedData[clusterid].map((item: any) => (
-                        <div className='flex flex-col items-center gap-4 py-5 justify-center text-center' key={`${clusterid}-${item.id}`}>  
+                        <ContentWrapper className='flex flex-col items-center gap-4 py-5 justify-center text-center' key={`${clusterid}-${item.id}`}>  
                           <li className='m-auto'>
                             <Image
                               src={`https://filipizen.com/resources/${item.id}.png`}
@@ -106,18 +106,18 @@ const members = async () => {
                               priority
                             />
                           </li>
-                          <div>
+                          <ContentWrapper className=''>
                             <Text text={item.title} style='2xl:text-4xl text-sm xs:text-base xxs:text-sm m-auto w-[120px] h-[50px]' />
-                          </div>
-                        </div>
+                          </ContentWrapper>
+                        </ContentWrapper>
                       ))}
                     </ul>
                   </li>
                 ))}
               </ul>
-            </div>
+            </ContentWrapper>
           ) : ''}
-        </div>
+        </ContentWrapper>
       </Container>
     </div>
   )
