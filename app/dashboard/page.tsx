@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import Button from '../components/ui/Button';
 import Text from '../components/ui/Text';
 
-const dashboard = () => {
+const Dashboard = () => {
   const {data: session, status} = useSession();
   const router = useRouter();
 
@@ -25,4 +25,4 @@ const dashboard = () => {
   }
 }
 
-export default dashboard
+export default Dashboard

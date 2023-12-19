@@ -29,7 +29,7 @@ const poppins = Poppins({
   display: 'swap',
 });
 
-const login = () => {
+const Login = () => {
   const { data: session } = useSession();
   const router = useRouter();
 
@@ -107,4 +107,4 @@ const login = () => {
   )
 }
 
-export default login;
+export default Login;
