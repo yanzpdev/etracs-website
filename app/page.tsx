@@ -7,6 +7,7 @@ import Sidebar from './components/ui/Sidebar'
 import Partners from './components/modules/Partners'
 import Products from './components/modules/Products'
 import Solutions from './components/modules/Solutions'
+import Messenger from './components/ui/Messenger'
 
 export const metadata: Metadata = {
   title: 'ETRACS',
@@ -31,6 +32,7 @@ export default function Home() {
       <Partners />
       <Products />
       <Solutions />
+      <Messenger />
     </main>
   )
 }
