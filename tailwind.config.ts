@@ -23,7 +23,6 @@ const config: Config = {
       '4xl' : { 'min' : '2560px', 'max' : '3839px' },  // High-resolution Monitors (e.g., QHD monitors)
       '5xl' : { 'min' : '3840px'},                     // 4K UHD Monitors / TVs
     },
-    
   },
   plugins: [],
 }
