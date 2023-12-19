@@ -37,7 +37,7 @@ const Login = () => {
     if (session != null) {
       router.push('/dashboard');
     }
-  }, [session]);
+  }, [router, session]);
 
   return (
     <>
