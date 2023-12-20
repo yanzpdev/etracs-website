@@ -8,6 +8,6 @@ module.exports = {
     },
     
     images: {
-        domains: ['filipizen.com', 'images.unsplash.com'], // Add the domains where your images are hosted
+        domains: ['filipizen.com', 'images.unsplash.com', 'i.insider.com', 'platform-lookaside.fbsbx.com'], // Add the domains where your images are hosted
       },
 }

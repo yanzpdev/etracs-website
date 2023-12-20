@@ -1,0 +1,4 @@
+.menu-open {
+    width: calc(100% - 300px);
+    transition-delay: 0.5s
+  }

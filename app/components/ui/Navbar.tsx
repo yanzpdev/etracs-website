@@ -4,11 +4,11 @@ import { AiFillHome } from 'react-icons/ai';
 import { BsFillPeopleFill, BsFillBoxFill } from 'react-icons/bs';
 import { MdHandshake } from 'react-icons/md';
 import { HiLightBulb, HiDocumentText } from 'react-icons/hi';
+import { Quicksand } from 'next/font/google';
 import { Link } from 'react-scroll';
 import RLink from 'next/link';
 import LinkBtn from '../ui/LinkBtn';
 import Text from '../ui/Text';
-import { Quicksand } from 'next/font/google';
 
 const quicksand = Quicksand({
   subsets: ['latin'],
@@ -17,8 +17,9 @@ const quicksand = Quicksand({
 
 interface NavbarProps {
   isPage: boolean;
+  addClasses: string;
 }
-const Navbar: React.FC<NavbarProps> = ({ isPage }) => {
+const Navbar: React.FC<NavbarProps> = ({ isPage, addClasses }) => {
   const modules = [
     { name: 'Home', icon: <AiFillHome size={15} /> },
     { name: 'Members', icon: <BsFillPeopleFill size={15} /> },
@@ -29,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ isPage }) => {
   ];
 
   return (
-    <div className={`fixed w-full h-[5.5rem] flex justify-between items-center px-4 z-10 bg-white xxs:h-[4rem] ${quicksand.className}`}>
+    <div className={`${addClasses} w-full h-[5.5rem] flex justify-between items-center px-4 z-10 bg-white xxs:h-[4rem] ${quicksand.className}`}>
       {isPage === true ? (
         <>
           <RLink href='/' className='w-fit h-fit'>

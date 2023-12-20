@@ -154,12 +154,12 @@ const LayoutComponent: React.FC<ClassNames> = ({
               rounded-xl 
               w-full 
               h-full 
-              relative
-              xxs:hidden xs:hidden sm:hidden md:hidden lg:hidden'
+              relative 
+              xxs:hidden xs:hidden sm:hidden md:hidden lg:hidden' 
             >
               <Image 
-                src='../assets/turnkey.svg'
-                alt='Turnkey'
+                src='../assets/turnkey.svg' 
+                alt='Turnkey' 
                 width={700}
                 height={700}
                 className='lg:w-full lg:h-[200px] rounded-xl'
@@ -187,15 +187,15 @@ const LayoutComponent: React.FC<ClassNames> = ({
                 border 
                 rounded-xl 
                 w-full h-full 
-                relative
-                3xl:hidden 2xl:hidden xl:hidden xxs:my-5 xs:my-5'
+                relative 
+                3xl:hidden 2xl:hidden xl:hidden xxs:my-5 xs:my-5' 
               >
               <Image 
-                src='../assets/turnkey.svg'
-                alt='Turnkey'
-                width={700}
-                height={700}
-                className='rounded-xl'
+                src='../assets/turnkey.svg' 
+                alt='Turnkey' 
+                width={700} 
+                height={700} 
+                className='rounded-xl' 
               />
               <Button 
                 btnText='Watch Now' 
@@ -206,7 +206,7 @@ const LayoutComponent: React.FC<ClassNames> = ({
                   bg-blue-700 hover:bg-blue-500 
                   duration-300 
                   rounded-xl 
-                  text-lg text-white xxs:text-sm sm:text-4xl md:text-4xl font-bold  
+                  text-lg text-white xxs:text-sm sm:text-4xl md:text-4xl font-bold 
                   flex items-center gap-2' 
                 onClick={showOverlay} 
                 compName='solutionsvid' 

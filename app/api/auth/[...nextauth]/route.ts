@@ -27,7 +27,7 @@ const authOptions = {
           await connectMongoDB();
           const userExists = await User.findOne({ userId });
           if(!userExists) {
-            const res = await fetch("https://etracs-website.vercel.app/api/user", {
+            const res = await fetch("http://localhost:3000/api/user", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

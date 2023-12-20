@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <main className={`text-slate-700 ${raleway.className}`}>
       {/* <VideoOverlay> */}
-        <Navbar isPage={false} />
+        <Navbar isPage={false} addClasses='fixed' />
         <Sidebar />
         <Homepage />
         <Members />
