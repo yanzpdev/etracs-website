@@ -7,7 +7,7 @@ import { Metadata } from 'next';
 import { getMembersData } from '../utils/helpers';
 import Image from 'next/image';
 import Text from '../components/ui/Text';
-
+import { getSession } from 'next-auth/react';
 
 export const metadata: Metadata = {
   title: 'Members',
@@ -29,7 +29,16 @@ interface Member {
   state: string;
 }
 
-const members = async () => {
+const members = async ({req, res}: any) => {
+  const session = await getSession({req});
+  let isSignedIn = ''
+  if (!session) {
+    isSignedIn = 'false'
+  }
+
+  else {
+    isSignedIn = 'true'
+  }
   const groupedData: Record<string, Member[]> = {};
   const membersData = await getMembersData();
   const filteredData: Member[] = membersData.filter((item: { subtype: string; }) => {
@@ -83,7 +92,7 @@ const members = async () => {
   
   return (
     <div className={`text-slate-700 ${raleway.className}`}>
-      <Navbar isPage={true} addClasses='' />
+      <Navbar isPage={true} compName='members' addClasses='fixed'/>
       <Container name='none' addClasses=''>
         <ContentWrapper className='my-10'>
           <h1 className='text-6xl font-bold'>Members</h1>

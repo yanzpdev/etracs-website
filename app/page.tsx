@@ -10,6 +10,7 @@ import Solutions from './components/modules/Solutions'
 import Messenger from './components/ui/Messenger'
 import VideoOverlay from './components/ui/VideoOverlay'
 import Footer from './components/ui/Footer'
+import { showOverlay } from './utils/helpers'
 
 export const metadata: Metadata = {
   title: 'ETRACS',
@@ -26,9 +27,10 @@ const raleway = Raleway({
 export default function Home() {
 
   return (
-    <main className={`text-slate-700 ${raleway.className}`}>
-      {/* <VideoOverlay> */}
-        <Navbar isPage={false} addClasses='fixed' />
+    <>
+      <VideoOverlay/>
+      <main className={`text-slate-700 ${raleway.className}`}>
+        <Navbar isPage={false} addClasses='fixed' compName='' />
         <Sidebar />
         <Homepage />
         <Members />
@@ -37,7 +39,8 @@ export default function Home() {
         <Solutions />
         <Footer />
         <Messenger />
-      {/* </VideoOverlay> */}
-    </main>
+      </main>
+    </>
+    
   )
 }

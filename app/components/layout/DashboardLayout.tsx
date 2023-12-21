@@ -8,16 +8,26 @@ import Text from '../ui/Text';
 import ContentWrapper from './ContentWrapper';
 import Navbar from '../ui/Navbar';
 import { push as Menu } from 'react-burger-menu';
-import {Raleway} from 'next/font/google';
+import {Raleway, Roboto} from 'next/font/google';
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import { RiArrowRightSFill } from "react-icons/ri";
 import { IoIosArrowDown } from "react-icons/io";
 import Image from 'next/image';
-// import './styles/menuOpen.css';
+import { GiMoneyStack } from "react-icons/gi";
+import { BsGraphUpArrow } from "react-icons/bs";
+import { BsFillPeopleFill } from "react-icons/bs";
+import { SiBookstack } from "react-icons/si";
 
 const raleway = Raleway({
   subsets: ['latin'],
   weight: ['400', '600' ,'700'],
+  style: ['normal'],
+  display: 'swap',
+});
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '500' ,'700'],
   style: ['normal'],
   display: 'swap',
 });
@@ -90,10 +100,10 @@ const Dashboard = () => {
   
   const barData = [
     ["Year", "Sales", "Expenses", "Profit"],
-    ["2014", 1000, 400, 200],
-    ["2015", 1170, 460, 250],
-    ["2016", 660, 1120, 300],
-    ["2017", 1030, 540, 350],
+    ["2021", 1000, 400, 200],
+    ["2022", 1170, 460, 250],
+    ["2023", 660, 1120, 300],
+    ["2024", 1030, 540, 350],
   ];
 
   const tabs = [
@@ -113,13 +123,21 @@ const Dashboard = () => {
   };
 
   const pieOptions = {
-    title: "My Daily Activities",
+    title: "Sample Pie Chart",
+    titleTextStyle: {
+      fontName: raleway,
+    },
     is3D: true,
+    fontName: raleway,
     // backgroundColor: '#E5E3E6',
   };
 
   const lineOptions = {
-    title: "Sticks, default",
+    title: "Sample Line Chart",
+    titleTextStyle: {
+      fontName: raleway,
+    },
+    fontName: raleway,
     curveType: "function",
     series: [{ color: "#E7711B" }],
     intervals: { style: "area" },
@@ -128,8 +146,12 @@ const Dashboard = () => {
 
   const barOptions = {
     chart: {
-      title: "Company Performance",
-      subtitle: "Sales, Expenses, and Profit: 2014-2017",
+      title: "Sample Bar Graph",
+      titleTextStyle: {
+        fontName: raleway,
+      },
+      fontName: raleway,
+      subtitle: "Sample Sales, Expenses, and Profit: 2023-2024",
     },
   };
 
@@ -138,6 +160,7 @@ const Dashboard = () => {
       router.push('/login');
     }
   }, [status, router]);
+
 
   if (status === 'authenticated') {
     return (
@@ -157,7 +180,7 @@ const Dashboard = () => {
             width={350}
             className='w-fit h-full px-5 p-5 bg-blue-700 z-50 text-center'
           >
-            <div className='flex gap-1 items-center py-5' style={{display: 'flex'}}>
+            <div className='flex gap-1 items-center py-5 b-blue-700' style={{display: 'flex'}}>
               <div className='w-[100px] h-[100px] rounded-full overflow-hidden mx-auto' >
                 <Image
                   src={session?.user?.image || 'https://i.insider.com/5f36825ae89ebf001f044839?width=700'}                  
@@ -212,60 +235,61 @@ const Dashboard = () => {
             </ContentWrapper>
           </Menu>
         </div>
-        
+
         <main id='page-wrap' className={`bg-[#E5E3E6] absolute h-full ${menuOpen ? 'w-fit' : 'w-full'}`}>
           <motion.div className='w-full h-full flex items-center z-50 justify-center bg-blue-700'>
-            <motion.div animate={controls} onClick={handleClick} className='px-3 h-screen flex items-center cursor-pointer'>
+            <motion.div animate={controls} onClick={handleClick} className='px-3 h-full flex items-center cursor-pointer'>
               <RiArrowRightSFill className='text-white' />
             </motion.div>
-            <ContentWrapper className='flex flex-col w-full h-screen bg-white'>
-              <Navbar isPage={true} addClasses='w-fit' />
-              {/* <div className='flex justify-between mx-10'>
-                <div>1</div>
-                <div>2</div>
-              </div> */}
+            <ContentWrapper className='flex flex-col w-full h-full bg-white'>
+              <Navbar compName='dashboard' isPage={true} addClasses='w-full' />
               <ContentWrapper className={`p-5 bg-[#E5E3E6] overflow-y-scroll ${raleway.className}`}>
-                <ContentWrapper className='grid grid-cols-4 gap-5 my-2.5'>
-                  <div className='flex flex-col'>
-                    <div className='bg-white rounded-t-xl p-5 text-slate-700'>
-                      1
-                    </div>
-                    <div className='bg-[#FCC066] rounded-b-xl text-white px-5 py-2'>
-                      Total Revenue
-                    </div>
-                  </div>
+                
+                <ContentWrapper className='grid grid-cols-4 gap-5 my-2.5 font-bold'>
+                  <ContentWrapper className='flex flex-col'>
+                    <ContentWrapper className='bg-white text-2xl rounded-t-xl p-4 text-[#FCC066]'>
+                      <ContentWrapper className='flex justify-between items-center'>
+                        <Text text='₱ 300,000,000' style={`${roboto.className} text-4xl`} />
+                        <GiMoneyStack size={50}/>
+                      </ContentWrapper>
+                    </ContentWrapper>
+                    <Text text='Total Revenue' style='bg-[#FCC066] rounded-b-xl text-white px-5 py-2' />
+                  </ContentWrapper>
 
-                  <div className='flex flex-col'>
-                    <div className='bg-white rounded-t-xl p-5 text-slate-700'>
-                      1
-                    </div>
-                    <div className='bg-[#66FCAB] rounded-b-xl text-white px-5 py-2'>
-                      Total Revenue
-                    </div>
-                  </div>
+                  <ContentWrapper className='flex flex-col'>
+                    <ContentWrapper className='bg-white text-2xl rounded-t-xl p-4 text-[#66FCAB]'>
+                      <ContentWrapper className='flex justify-between items-center'>
+                        <Text text='64' style={`${roboto.className} text-4xl`} />
+                        <BsFillPeopleFill size={50} className='p-1'/>
+                      </ContentWrapper>
+                    </ContentWrapper>
+                    <Text text='Members' style='bg-[#66FCAB] rounded-b-xl text-white px-5 py-2' />
+                  </ContentWrapper>
 
-                  <div className='flex flex-col'>
-                    <div className='bg-white rounded-t-xl p-5 text-slate-700'>
-                      1
-                    </div>
-                    <div className='bg-[#6690FC] rounded-b-xl text-white px-5 py-2'>
-                      Total Revenue
-                    </div>
-                  </div>
+                  <ContentWrapper className='flex flex-col'>
+                    <ContentWrapper className='bg-white text-2xl rounded-t-xl p-4 text-[#6690FC]'>
+                      <ContentWrapper className='flex justify-between items-center'>
+                        <Text text='0' style={`${roboto.className} text-4xl`} />
+                        <BsGraphUpArrow size={50} className='p-2' />
+                      </ContentWrapper>
+                    </ContentWrapper>
+                    <Text text='?????' style='bg-[#6690FC] rounded-b-xl text-white px-5 py-2' />
+                  </ContentWrapper>
 
-                  <div className='flex flex-col'>
-                    <div className='bg-white rounded-t-xl p-5 text-slate-700'>
-                      1
-                    </div>
-                    <div className='bg-[#FC6666] rounded-b-xl text-white px-5 py-2'>
-                      Total Revenue
-                    </div>
-                  </div>
+                  <ContentWrapper className='flex flex-col'>
+                    <ContentWrapper className='bg-white text-2xl rounded-t-xl p-4 text-[#FC6666]'>
+                      <ContentWrapper className='flex justify-between items-center'>
+                        <Text text='0' style={`${roboto.className} text-4xl`} />
+                        <SiBookstack size={50} className='py-1'/>
+                      </ContentWrapper>
+                    </ContentWrapper>
+                    <Text text='?????' style='bg-[#FC6666] rounded-b-xl text-white px-5 py-2' />
+                  </ContentWrapper>
                 </ContentWrapper>
                 
                 
                 <ContentWrapper className='grid grid-cols-2 gap-5'>
-                  <ContentWrapper className='border rounded-xl p-2 my-5 bg-white '>
+                  <ContentWrapper className='border rounded-xl p-2 my-2.5 bg-white '>
                     <Chart
                       chartType="LineChart"
                       width="100%"
@@ -275,7 +299,7 @@ const Dashboard = () => {
                     />
                   </ContentWrapper>
 
-                  <ContentWrapper className='border rounded-xl p-2 my-5 bg-white flex items-center justify-center'>
+                  <ContentWrapper className='border rounded-xl p-2 my-2.5 bg-white flex items-center justify-center'>
                     <Chart
                       chartType="Bar"
                       width="90%"
@@ -285,14 +309,14 @@ const Dashboard = () => {
                     />
                   </ContentWrapper>
                 </ContentWrapper>
-
-                <ContentWrapper className='border rounded-xl p-2 my-5 bg-white '>
+               
+                <ContentWrapper className='border rounded-xl p-2 my-2.5 bg-white '>
                   <Chart
                     chartType="PieChart"
                     data={pieData}
                     options={pieOptions}
                     width='100%'
-                    className={`${raleway.className} w-fit`}
+                    className={raleway.className}
                   />
                 </ContentWrapper>
                 
