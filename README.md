@@ -20,17 +20,38 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Libraries to install for local machine / dev environment
 
-To learn more about Next.js, take a look at the following resources:
+@types/react-dom@18.2.17
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+@types/react-scroll@1.8.10
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+autoprefixer@10.4.16
 
-## Deploy on Vercel
+framer-motion@10.16.16
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+mongoose@8.0.3
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+next-auth@4.24.5
+
+postcss@8.4.32
+
+react-burger-menu@3.0.9
+
+react-dom@18.2.0
+
+react-facebook@9.0.12
+
+react-google-charts@4.0.1
+
+react-hook-form@7.49.2
+
+react-icons@4.12.0
+
+react-player@2.14.0
+
+react-scroll@1.9.0
+
+swiper@11.0.5
+
+
