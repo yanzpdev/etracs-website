@@ -20,7 +20,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Libraries to install for local machine / dev environment libraries to install for local machine
+## Libraries to install for local machine / dev environment
 
 @types/react-dom@18.2.17
 
