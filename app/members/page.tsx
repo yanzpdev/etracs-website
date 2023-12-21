@@ -83,7 +83,7 @@ const members = async () => {
   
   return (
     <div className={`text-slate-700 ${raleway.className}`}>
-      <Navbar isPage={true} />
+      <Navbar isPage={true} addClasses='' />
       <Container name='none' addClasses=''>
         <ContentWrapper className='my-10'>
           <h1 className='text-6xl font-bold'>Members</h1>
