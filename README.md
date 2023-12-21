@@ -22,21 +22,36 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Libraries to install for local machine / dev environment libraries to install for local machine
 
-├── @types/react-dom@18.2.17
-├── @types/react-scroll@1.8.10
-├── autoprefixer@10.4.16
-├── framer-motion@10.16.16
-├── mongoose@8.0.3
-├── next-auth@4.24.5
-├── postcss@8.4.32
-├── react-burger-menu@3.0.9
-├── react-dom@18.2.0
-├── react-facebook@9.0.12
-├── react-google-charts@4.0.1
-├── react-hook-form@7.49.2
-├── react-icons@4.12.0
-├── react-player@2.14.0
-├── react-scroll@1.9.0
-├── swiper@11.0.5
+@types/react-dom@18.2.17
+
+@types/react-scroll@1.8.10
+
+autoprefixer@10.4.16
+
+framer-motion@10.16.16
+
+mongoose@8.0.3
+
+next-auth@4.24.5
+
+postcss@8.4.32
+
+react-burger-menu@3.0.9
+
+react-dom@18.2.0
+
+react-facebook@9.0.12
+
+react-google-charts@4.0.1
+
+react-hook-form@7.49.2
+
+react-icons@4.12.0
+
+react-player@2.14.0
+
+react-scroll@1.9.0
+
+swiper@11.0.5
 
 
